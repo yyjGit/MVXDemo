@@ -4,15 +4,15 @@
 
 #import <UIKit/UIKit.h>
 
-#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
-#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
-#define NAVBAR_HEIGHT 64
-
-#define OneInterval 10
-
-#define ScreenBounds [UIScreen mainScreen].bounds
-#define ScreenBoundsWithoutTopBar CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - SCREEN_TOP_HEIGHT)
-#define ScreenBoundsStartWithTopBar CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - SCREEN_TOP_HEIGHT)
+//#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+//#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+//#define NAVBAR_HEIGHT 64
+//
+//#define OneInterval 10
+//
+//#define ScreenBounds [UIScreen mainScreen].bounds
+//#define ScreenBoundsWithoutTopBar CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - SCREEN_TOP_HEIGHT)
+//#define ScreenBoundsStartWithTopBar CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - SCREEN_TOP_HEIGHT)
 
 @interface UIView (Extension)
 

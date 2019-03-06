@@ -8,25 +8,47 @@
 
 /* Begin PBXBuildFile section */
 		51B79437077A5737FE9BDD3D /* libPods-MVXDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F954650BC9D893373C4141C0 /* libPods-MVXDemo.a */; };
+		D943B446222F4546002EC558 /* UserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D943B445222F4546002EC558 /* UserDetailViewController.m */; };
+		D943B449222F485A002EC558 /* UserBlogListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D943B448222F485A002EC558 /* UserBlogListViewController.m */; };
+		D943B44C222F4870002EC558 /* UserDraftListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D943B44B222F4870002EC558 /* UserDraftListViewController.m */; };
+		D943B44F222FF54B002EC558 /* MVCDraftTableviewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D943B44E222FF54B002EC558 /* MVCDraftTableviewHelper.m */; };
+		D943B452222FFA77002EC558 /* MVCDraftTableviewCellHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D943B451222FFA77002EC558 /* MVCDraftTableviewCellHelper.m */; };
 		D9DB5D99222E9BEB00585E11 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DB5D98222E9BEB00585E11 /* AppDelegate.m */; };
 		D9DB5D9C222E9BEB00585E11 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DB5D9B222E9BEB00585E11 /* ViewController.m */; };
 		D9DB5D9F222E9BEB00585E11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9DB5D9D222E9BEB00585E11 /* Main.storyboard */; };
 		D9DB5DA1222E9BEB00585E11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9DB5DA0222E9BEB00585E11 /* Assets.xcassets */; };
 		D9DB5DA4222E9BEB00585E11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9DB5DA2222E9BEB00585E11 /* LaunchScreen.storyboard */; };
 		D9DB5DA7222E9BEB00585E11 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DB5DA6222E9BEB00585E11 /* main.m */; };
-		D9DB5DB4222E9CE400585E11 /* C in Resources */ = {isa = PBXBuildFile; fileRef = D9DB5DB0222E9CE400585E11 /* C */; };
-		D9DB5DB5222E9CE400585E11 /* V in Resources */ = {isa = PBXBuildFile; fileRef = D9DB5DB1222E9CE400585E11 /* V */; };
-		D9DB5DB6222E9CE400585E11 /* M in Resources */ = {isa = PBXBuildFile; fileRef = D9DB5DB2222E9CE400585E11 /* M */; };
-		D9DB5DB7222E9CE400585E11 /* Scene in Resources */ = {isa = PBXBuildFile; fileRef = D9DB5DB3222E9CE400585E11 /* Scene */; };
 		D9DB5DBE222EA13600585E11 /* UIView+Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DB5DB9222EA13600585E11 /* UIView+Controller.m */; };
 		D9DB5DBF222EA13600585E11 /* UIResponder+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DB5DBB222EA13600585E11 /* UIResponder+Router.m */; };
 		D9DB5DC0222EA13600585E11 /* UIView+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DB5DBD222EA13600585E11 /* UIView+Alert.m */; };
 		D9DB5DC3222EA13F00585E11 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DB5DC1222EA13F00585E11 /* UIView+Extension.m */; };
+		D9DB5DCF222EA4DB00585E11 /* MVCUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DB5DCE222EA4DB00585E11 /* MVCUserViewController.m */; };
+		D9DB5DD2222EA50600585E11 /* MVCMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DB5DD1222EA50600585E11 /* MVCMineViewController.m */; };
+		D9DB5DD5222EA59700585E11 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DB5DD4222EA59700585E11 /* User.m */; };
+		D9DB5DD8222EA5F400585E11 /* Blog.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DB5DD7222EA5F400585E11 /* Blog.m */; };
+		D9DB5DDB222EA64200585E11 /* Draft.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DB5DDA222EA64200585E11 /* Draft.m */; };
+		D9DB5DDE222EA7BD00585E11 /* UserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DB5DDD222EA7BD00585E11 /* UserInfoView.m */; };
+		D9DB5DE1222EA86700585E11 /* MVCBlogTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DB5DE0222EA86700585E11 /* MVCBlogTableViewCell.m */; };
+		D9DB5DE4222EA87D00585E11 /* MVCDraftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DB5DE3222EA87C00585E11 /* MVCDraftTableViewCell.m */; };
+		D9DB5DE8222EA8C800585E11 /* UserAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DB5DE7222EA8C800585E11 /* UserAPIManager.m */; };
+		D9DB5DEC222EB08700585E11 /* MVCBlogTableViewMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DB5DEB222EB08700585E11 /* MVCBlogTableViewMediator.m */; };
+		D9DB5DEF222EB25800585E11 /* MVCBlogTableViewCellMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DB5DEE222EB25800585E11 /* MVCBlogTableViewCellMediator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8B1FDA86784F641E7C5AB9A4 /* Pods-MVXDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVXDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVXDemo/Pods-MVXDemo.release.xcconfig"; sourceTree = "<group>"; };
 		CC992354A1C3433A0F663606 /* Pods-MVXDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVXDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVXDemo/Pods-MVXDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		D943B444222F4546002EC558 /* UserDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDetailViewController.h; sourceTree = "<group>"; };
+		D943B445222F4546002EC558 /* UserDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDetailViewController.m; sourceTree = "<group>"; };
+		D943B447222F485A002EC558 /* UserBlogListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserBlogListViewController.h; sourceTree = "<group>"; };
+		D943B448222F485A002EC558 /* UserBlogListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserBlogListViewController.m; sourceTree = "<group>"; };
+		D943B44A222F4870002EC558 /* UserDraftListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDraftListViewController.h; sourceTree = "<group>"; };
+		D943B44B222F4870002EC558 /* UserDraftListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDraftListViewController.m; sourceTree = "<group>"; };
+		D943B44D222FF54B002EC558 /* MVCDraftTableviewHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCDraftTableviewHelper.h; sourceTree = "<group>"; };
+		D943B44E222FF54B002EC558 /* MVCDraftTableviewHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCDraftTableviewHelper.m; sourceTree = "<group>"; };
+		D943B450222FFA77002EC558 /* MVCDraftTableviewCellHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCDraftTableviewCellHelper.h; sourceTree = "<group>"; };
+		D943B451222FFA77002EC558 /* MVCDraftTableviewCellHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCDraftTableviewCellHelper.m; sourceTree = "<group>"; };
 		D9DB5D94222E9BEB00585E11 /* MVXDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVXDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9DB5D97222E9BEB00585E11 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D9DB5D98222E9BEB00585E11 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -37,10 +59,6 @@
 		D9DB5DA3222E9BEB00585E11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9DB5DA5222E9BEB00585E11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9DB5DA6222E9BEB00585E11 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D9DB5DB0222E9CE400585E11 /* C */ = {isa = PBXFileReference; lastKnownFileType = folder; path = C; sourceTree = "<group>"; };
-		D9DB5DB1222E9CE400585E11 /* V */ = {isa = PBXFileReference; lastKnownFileType = folder; path = V; sourceTree = "<group>"; };
-		D9DB5DB2222E9CE400585E11 /* M */ = {isa = PBXFileReference; lastKnownFileType = folder; path = M; sourceTree = "<group>"; };
-		D9DB5DB3222E9CE400585E11 /* Scene */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scene; sourceTree = "<group>"; };
 		D9DB5DB8222EA13600585E11 /* UIView+Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Controller.h"; sourceTree = "<group>"; };
 		D9DB5DB9222EA13600585E11 /* UIView+Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Controller.m"; sourceTree = "<group>"; };
 		D9DB5DBA222EA13600585E11 /* UIResponder+Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+Router.h"; sourceTree = "<group>"; };
@@ -49,6 +67,29 @@
 		D9DB5DBD222EA13600585E11 /* UIView+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Alert.m"; sourceTree = "<group>"; };
 		D9DB5DC1222EA13F00585E11 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		D9DB5DC2222EA13F00585E11 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		D9DB5DCD222EA4DB00585E11 /* MVCUserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCUserViewController.h; sourceTree = "<group>"; };
+		D9DB5DCE222EA4DB00585E11 /* MVCUserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCUserViewController.m; sourceTree = "<group>"; };
+		D9DB5DD0222EA50600585E11 /* MVCMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCMineViewController.h; sourceTree = "<group>"; };
+		D9DB5DD1222EA50600585E11 /* MVCMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCMineViewController.m; sourceTree = "<group>"; };
+		D9DB5DD3222EA59700585E11 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		D9DB5DD4222EA59700585E11 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		D9DB5DD6222EA5F400585E11 /* Blog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Blog.h; sourceTree = "<group>"; };
+		D9DB5DD7222EA5F400585E11 /* Blog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Blog.m; sourceTree = "<group>"; };
+		D9DB5DD9222EA64200585E11 /* Draft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Draft.h; sourceTree = "<group>"; };
+		D9DB5DDA222EA64200585E11 /* Draft.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Draft.m; sourceTree = "<group>"; };
+		D9DB5DDC222EA7BD00585E11 /* UserInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoView.h; sourceTree = "<group>"; };
+		D9DB5DDD222EA7BD00585E11 /* UserInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoView.m; sourceTree = "<group>"; };
+		D9DB5DDF222EA86700585E11 /* MVCBlogTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCBlogTableViewCell.h; sourceTree = "<group>"; };
+		D9DB5DE0222EA86700585E11 /* MVCBlogTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCBlogTableViewCell.m; sourceTree = "<group>"; };
+		D9DB5DE2222EA87C00585E11 /* MVCDraftTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCDraftTableViewCell.h; sourceTree = "<group>"; };
+		D9DB5DE3222EA87C00585E11 /* MVCDraftTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCDraftTableViewCell.m; sourceTree = "<group>"; };
+		D9DB5DE6222EA8C800585E11 /* UserAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAPIManager.h; sourceTree = "<group>"; };
+		D9DB5DE7222EA8C800585E11 /* UserAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAPIManager.m; sourceTree = "<group>"; };
+		D9DB5DE9222EABBA00585E11 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D9DB5DEA222EB08700585E11 /* MVCBlogTableViewMediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCBlogTableViewMediator.h; sourceTree = "<group>"; };
+		D9DB5DEB222EB08700585E11 /* MVCBlogTableViewMediator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCBlogTableViewMediator.m; sourceTree = "<group>"; };
+		D9DB5DED222EB25800585E11 /* MVCBlogTableViewCellMediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCBlogTableViewCellMediator.h; sourceTree = "<group>"; };
+		D9DB5DEE222EB25800585E11 /* MVCBlogTableViewCellMediator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCBlogTableViewCellMediator.m; sourceTree = "<group>"; };
 		F954650BC9D893373C4141C0 /* libPods-MVXDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVXDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -93,8 +134,15 @@
 		D9DB5D96222E9BEB00585E11 /* MVXDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D9DB5DE5222EA8BA00585E11 /* APIManager */,
 				D9DB5DAE222E9CBC00585E11 /* Utils */,
 				D9DB5DAF222E9CBC00585E11 /* MVC */,
+				D943B444222F4546002EC558 /* UserDetailViewController.h */,
+				D943B445222F4546002EC558 /* UserDetailViewController.m */,
+				D943B447222F485A002EC558 /* UserBlogListViewController.h */,
+				D943B448222F485A002EC558 /* UserBlogListViewController.m */,
+				D943B44A222F4870002EC558 /* UserDraftListViewController.h */,
+				D943B44B222F4870002EC558 /* UserDraftListViewController.m */,
 				D9DB5DAD222E9CBC00585E11 /* SupportFiles */,
 			);
 			path = MVXDemo;
@@ -112,6 +160,7 @@
 				D9DB5DA2222E9BEB00585E11 /* LaunchScreen.storyboard */,
 				D9DB5DA5222E9BEB00585E11 /* Info.plist */,
 				D9DB5DA6222E9BEB00585E11 /* main.m */,
+				D9DB5DE9222EABBA00585E11 /* PrefixHeader.pch */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -134,12 +183,73 @@
 		D9DB5DAF222E9CBC00585E11 /* MVC */ = {
 			isa = PBXGroup;
 			children = (
-				D9DB5DB0222E9CE400585E11 /* C */,
-				D9DB5DB2222E9CE400585E11 /* M */,
-				D9DB5DB3222E9CE400585E11 /* Scene */,
-				D9DB5DB1222E9CE400585E11 /* V */,
+				D9DB5DC9222EA4A500585E11 /* Scene */,
+				D9DB5DCA222EA4A500585E11 /* C */,
+				D9DB5DCC222EA4A500585E11 /* M */,
+				D9DB5DCB222EA4A500585E11 /* V */,
 			);
 			path = MVC;
+			sourceTree = "<group>";
+		};
+		D9DB5DC9222EA4A500585E11 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				D9DB5DCD222EA4DB00585E11 /* MVCUserViewController.h */,
+				D9DB5DCE222EA4DB00585E11 /* MVCUserViewController.m */,
+				D9DB5DD0222EA50600585E11 /* MVCMineViewController.h */,
+				D9DB5DD1222EA50600585E11 /* MVCMineViewController.m */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		D9DB5DCA222EA4A500585E11 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				D9DB5DEA222EB08700585E11 /* MVCBlogTableViewMediator.h */,
+				D9DB5DEB222EB08700585E11 /* MVCBlogTableViewMediator.m */,
+				D9DB5DED222EB25800585E11 /* MVCBlogTableViewCellMediator.h */,
+				D9DB5DEE222EB25800585E11 /* MVCBlogTableViewCellMediator.m */,
+				D943B44D222FF54B002EC558 /* MVCDraftTableviewHelper.h */,
+				D943B44E222FF54B002EC558 /* MVCDraftTableviewHelper.m */,
+				D943B450222FFA77002EC558 /* MVCDraftTableviewCellHelper.h */,
+				D943B451222FFA77002EC558 /* MVCDraftTableviewCellHelper.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		D9DB5DCB222EA4A500585E11 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				D9DB5DDF222EA86700585E11 /* MVCBlogTableViewCell.h */,
+				D9DB5DE0222EA86700585E11 /* MVCBlogTableViewCell.m */,
+				D9DB5DE2222EA87C00585E11 /* MVCDraftTableViewCell.h */,
+				D9DB5DE3222EA87C00585E11 /* MVCDraftTableViewCell.m */,
+				D9DB5DDC222EA7BD00585E11 /* UserInfoView.h */,
+				D9DB5DDD222EA7BD00585E11 /* UserInfoView.m */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		D9DB5DCC222EA4A500585E11 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				D9DB5DD3222EA59700585E11 /* User.h */,
+				D9DB5DD4222EA59700585E11 /* User.m */,
+				D9DB5DD6222EA5F400585E11 /* Blog.h */,
+				D9DB5DD7222EA5F400585E11 /* Blog.m */,
+				D9DB5DD9222EA64200585E11 /* Draft.h */,
+				D9DB5DDA222EA64200585E11 /* Draft.m */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		D9DB5DE5222EA8BA00585E11 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				D9DB5DE6222EA8C800585E11 /* UserAPIManager.h */,
+				D9DB5DE7222EA8C800585E11 /* UserAPIManager.m */,
+			);
+			path = APIManager;
 			sourceTree = "<group>";
 		};
 		DECAF360DB16C90E439D3A13 /* Pods */ = {
@@ -211,13 +321,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9DB5DB6222E9CE400585E11 /* M in Resources */,
-				D9DB5DB4222E9CE400585E11 /* C in Resources */,
 				D9DB5DA4222E9BEB00585E11 /* LaunchScreen.storyboard in Resources */,
 				D9DB5DA1222E9BEB00585E11 /* Assets.xcassets in Resources */,
 				D9DB5D9F222E9BEB00585E11 /* Main.storyboard in Resources */,
-				D9DB5DB7222E9CE400585E11 /* Scene in Resources */,
-				D9DB5DB5222E9CE400585E11 /* V in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,13 +373,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9DB5DD8222EA5F400585E11 /* Blog.m in Sources */,
+				D9DB5DEF222EB25800585E11 /* MVCBlogTableViewCellMediator.m in Sources */,
+				D9DB5DD5222EA59700585E11 /* User.m in Sources */,
+				D9DB5DEC222EB08700585E11 /* MVCBlogTableViewMediator.m in Sources */,
+				D943B44F222FF54B002EC558 /* MVCDraftTableviewHelper.m in Sources */,
+				D9DB5DE4222EA87D00585E11 /* MVCDraftTableViewCell.m in Sources */,
 				D9DB5D9C222E9BEB00585E11 /* ViewController.m in Sources */,
+				D9DB5DDB222EA64200585E11 /* Draft.m in Sources */,
 				D9DB5DC0222EA13600585E11 /* UIView+Alert.m in Sources */,
 				D9DB5DBF222EA13600585E11 /* UIResponder+Router.m in Sources */,
+				D943B44C222F4870002EC558 /* UserDraftListViewController.m in Sources */,
+				D9DB5DE1222EA86700585E11 /* MVCBlogTableViewCell.m in Sources */,
+				D943B452222FFA77002EC558 /* MVCDraftTableviewCellHelper.m in Sources */,
 				D9DB5DC3222EA13F00585E11 /* UIView+Extension.m in Sources */,
+				D943B446222F4546002EC558 /* UserDetailViewController.m in Sources */,
 				D9DB5DA7222E9BEB00585E11 /* main.m in Sources */,
+				D943B449222F485A002EC558 /* UserBlogListViewController.m in Sources */,
 				D9DB5DBE222EA13600585E11 /* UIView+Controller.m in Sources */,
+				D9DB5DD2222EA50600585E11 /* MVCMineViewController.m in Sources */,
+				D9DB5DCF222EA4DB00585E11 /* MVCUserViewController.m in Sources */,
 				D9DB5D99222E9BEB00585E11 /* AppDelegate.m in Sources */,
+				D9DB5DDE222EA7BD00585E11 /* UserInfoView.m in Sources */,
+				D9DB5DE8222EA8C800585E11 /* UserAPIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +532,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X2VP8M6UBN;
+				GCC_PREFIX_HEADER = /Users/yangyongjie/Documents/iOSDemo/MVXDemo/MVXDemoo/MVXDemo/SupportFiles/PrefixHeader.pch;
 				INFOPLIST_FILE = MVXDemo/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yyjid.MVXDemo;
@@ -425,6 +548,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X2VP8M6UBN;
+				GCC_PREFIX_HEADER = /Users/yangyongjie/Documents/iOSDemo/MVXDemo/MVXDemoo/MVXDemo/SupportFiles/PrefixHeader.pch;
 				INFOPLIST_FILE = MVXDemo/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yyjid.MVXDemo;

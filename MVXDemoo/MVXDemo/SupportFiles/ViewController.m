@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "MVCUserViewController.h"
+
 @interface ViewController ()
 
 @end
@@ -25,5 +27,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)MVC:(UIButton *)sender
+{
+    [self.navigationController pushViewController:[MVCUserViewController instanceWithUserId:sender.tag] animated:YES];
+}
 
 @end
