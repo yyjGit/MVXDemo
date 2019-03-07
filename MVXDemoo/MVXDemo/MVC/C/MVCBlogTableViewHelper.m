@@ -6,28 +6,26 @@
 //  Copyright © 2019年 yyj. All rights reserved.
 //
 
-#import "MVCBlogTableViewMediator.h"
+#import "MVCBlogTableViewHelper.h"
 
-#import "MVCBlogTableViewCellMediator.h"
+#import "MVCBlogTableViewCellHelper.h"
 #import "MVCBlogTableViewCell.h"
 
-#import "UIView+Alert.h"
-#import "UIView+Controller.h"
 
-@interface MVCBlogTableViewMediator () <UITableViewDelegate, UITableViewDataSource>
+@interface MVCBlogTableViewHelper () <UITableViewDelegate, UITableViewDataSource>
 
 @property (copy, nonatomic) ViewControllerGenerator VCGenerator;
 @property (assign, nonatomic) NSUInteger userId;
 @property (strong, nonatomic) UserAPIManager *apiManager;
 
 @property (strong, nonatomic) UITableView *tableView;
-@property (strong, nonatomic) NSMutableArray<MVCBlogTableViewCellMediator *> *blogs;
+@property (strong, nonatomic) NSMutableArray<MVCBlogTableViewCellHelper *> *blogs;
 
 @end
 
 static NSString *kBlogCellId = @"blogCellId";
 
-@implementation MVCBlogTableViewMediator
+@implementation MVCBlogTableViewHelper
 
 #pragma mark - life cycle
 + (instancetype)instanceWithUserId:(NSUInteger)userId
@@ -66,7 +64,7 @@ static NSString *kBlogCellId = @"blogCellId";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MVCBlogTableViewCellMediator *cellHelper = self.blogs[indexPath.row];
+    MVCBlogTableViewCellHelper *cellHelper = self.blogs[indexPath.row];
     // 创建cell，绑定数据
     MVCBlogTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kBlogCellId];
     cell.title = cellHelper.blogTitleText;
@@ -154,13 +152,13 @@ static NSString *kBlogCellId = @"blogCellId";
 - (void)reloadTableViewWithBlogs:(NSArray *)blogs
 {
     for (Blog *blog in blogs) {
-        [self.blogs addObject:[MVCBlogTableViewCellMediator helperWithBlog:blog]];
+        [self.blogs addObject:[MVCBlogTableViewCellHelper helperWithBlog:blog]];
     }
     [self.tableView reloadData];
 }
 
 #pragma mark - getters
-- (NSMutableArray <MVCBlogTableViewCellMediator *>*)blogs
+- (NSMutableArray <MVCBlogTableViewCellHelper *>*)blogs
 {
     if (_blogs == nil) {
         _blogs = [NSMutableArray array];
@@ -171,7 +169,7 @@ static NSString *kBlogCellId = @"blogCellId";
 - (UITableView *)tableView
 {
     if (_tableView == nil) {
-        _tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         [_tableView registerClass:MVCBlogTableViewCell.class forCellReuseIdentifier:kBlogCellId];

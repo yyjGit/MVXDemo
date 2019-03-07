@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MVCUserInfoViewHelper, MVCBlogTableViewHelper;
 
 #define LoginUserId 123
 
 @interface MVCUserViewController : UIViewController
 
-@property (assign, nonatomic) NSUInteger userId;
+@property (assign, nonatomic, readonly) NSUInteger userId; // 用户id
+@property (strong, nonatomic) MVCUserInfoViewHelper *userInfoHelper; // 用户信息viewHelper
+@property (strong, nonatomic) MVCBlogTableViewHelper *blogHelper; // 博客tableViewHelper
 
 /**
  类初始化方法
@@ -21,5 +24,21 @@
  @return controller
  */
 + (instancetype)instanceWithUserId:(NSUInteger)userId;
+
+/**
+ 配置ViewHelper
+ */
+- (void)configHelper;
+
+/**
+ 布局页面子视图
+ */
+- (void)layoutPageSubviews;
+
+/**
+ 获取数据
+ */
+- (void)fetchData;
+
 
 @end

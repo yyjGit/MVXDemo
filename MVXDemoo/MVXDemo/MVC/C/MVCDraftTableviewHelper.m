@@ -10,7 +10,6 @@
 
 // views
 #import "MVCDraftTableViewCell.h"
-#import "UIView+Alert.h"
 
 // moder/other
 #import "MVCDraftTableviewCellHelper.h"
@@ -140,7 +139,7 @@ static NSString *kDraftCellId = @"draftCellId";
 - (UITableView *)tableView
 {
     if (_tableView == nil) {
-        _tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         [_tableView registerClass:MVCDraftTableViewCell.class forCellReuseIdentifier:kDraftCellId];

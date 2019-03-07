@@ -13,8 +13,14 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #import <Masonry.h>
+
+// pods
 #import <MJRefresh/MJRefresh.h>
 
+/** 自定义类别 */
+ #import "UIView+Extension.h"
+#import "UIView+Controller.h"
+#import "UIView+Alert.h"
 
 /** 常用宏定义 */
 #define kScreenBounds [UIScreen mainScreen].bounds

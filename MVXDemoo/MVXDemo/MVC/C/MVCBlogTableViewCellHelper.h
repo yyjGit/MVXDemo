@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Blog.h"
 
-@interface MVCBlogTableViewCellMediator : NSObject
+@interface MVCBlogTableViewCellHelper : NSObject
 
 + (instancetype)helperWithBlog:(Blog *)blog;
 

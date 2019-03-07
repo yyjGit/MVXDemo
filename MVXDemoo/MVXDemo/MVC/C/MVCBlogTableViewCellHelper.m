@@ -6,15 +6,15 @@
 //  Copyright © 2019年 yyj. All rights reserved.
 //
 
-#import "MVCBlogTableViewCellMediator.h"
+#import "MVCBlogTableViewCellHelper.h"
 
-@interface MVCBlogTableViewCellMediator ()
+@interface MVCBlogTableViewCellHelper ()
 
 @property (strong, nonatomic) Blog *blog;
 
 @end
 
-@implementation MVCBlogTableViewCellMediator
+@implementation MVCBlogTableViewCellHelper
 
 + (instancetype)helperWithBlog:(Blog *)blog 
 {

@@ -15,7 +15,7 @@
     2、布局tableView
     3、创建cellMediator
  */
-@interface MVCBlogTableViewMediator : NSObject
+@interface MVCBlogTableViewHelper : NSObject
 
 /**
  类初始化方法

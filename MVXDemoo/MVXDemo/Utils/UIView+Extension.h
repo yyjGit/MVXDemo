@@ -32,4 +32,12 @@
 - (void)disableAWhile;
 - (void)disableAWhile:(NSTimeInterval)time;
 
+
+/**
+ 设置圆角半径
+
+ @param radius 半径
+ */
+- (void)yj_setCornerRadius:(CGFloat)radius;
+
 @end

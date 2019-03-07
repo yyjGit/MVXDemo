@@ -7,13 +7,12 @@
 //
 
 #import "UserBlogListViewController.h"
-#import "UIView+Alert.h"
-#import "UIView+Extension.h"
-#import "MVCBlogTableViewMediator.h"
+
+#import "MVCBlogTableViewHelper.h"
 
 @interface UserBlogListViewController ()
 
-@property (strong, nonatomic) MVCBlogTableViewMediator *blogTableViewMediator;
+@property (strong, nonatomic) MVCBlogTableViewHelper *blogTableViewMediator;
 
 @end
 
@@ -34,10 +33,10 @@
 }
 
 #pragma mark - getters
-- (MVCBlogTableViewMediator *)blogTableViewMediator
+- (MVCBlogTableViewHelper *)blogTableViewMediator
 {
     if (_blogTableViewMediator == nil) {
-        _blogTableViewMediator = [MVCBlogTableViewMediator instanceWithUserId:666];
+        _blogTableViewMediator = [MVCBlogTableViewHelper instanceWithUserId:666];
     }
     return _blogTableViewMediator;
 }

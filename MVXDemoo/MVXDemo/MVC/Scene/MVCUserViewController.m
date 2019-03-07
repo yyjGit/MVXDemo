@@ -7,19 +7,18 @@
 //
 
 #import "MVCUserViewController.h"
-
-#import "MVCBlogTableViewMediator.h"
 #import "MVCMineViewController.h"
 #import "UserDetailViewController.h"
 
-#import "UIView+Alert.h"
-#import "UIView+Extension.h"
+// models/others
+#import "MVCBlogTableViewHelper.h"
+#import "MVCUserInfoViewHelper.h"
+
+// views
+#import "UserInfoView.h"
 
 @interface MVCUserViewController ()
-
-//@property (strong, nonatomic) UserInfoViewController *userInfoVC;
-@property (strong, nonatomic) MVCBlogTableViewMediator *blogHelper;
-
+@property (nonatomic, assign) BOOL isMineVc;
 @end
 
 @implementation MVCUserViewController
@@ -37,7 +36,8 @@
 - (instancetype)initWithUserId:(NSUInteger)userId
 {
     if (self = [super init]) {
-        self.userId = userId;
+        _userId = userId;
+        _isMineVc = (userId == LoginUserId);
     }
     return self;
 }
@@ -46,48 +46,51 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     self.title = [NSString stringWithFormat:@"用户%ld", self.userId];
     self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.userInfoHelper.infoView];
 
-    [self configuration];
+    // 如果是mineVc则之后代码不在执行，在mineVc中执行
+    if (self.isMineVc) return;
     
-    [self addUI];
-    
+    [self.view addSubview:self.blogHelper.tableView];
+    [self layoutPageSubviews];
+    [self configHelper];
     [self fetchData];
-
 }
 
-- (void)configuration
-{    
+#pragma mark - private methods
+- (void)configHelper
+{
+    [self.userInfoHelper setVCGenerator:^UIViewController *(id params) {
+        return [UserDetailViewController instanceWithUser:params];
+    }];
 
     [self.blogHelper setVCGenerator:^UIViewController *(id params) {
         return [BlogDetailViewController instanceWithBlog:params];
     }];
-    
-//    self.userInfoVC = [UserInfoViewController instanceWithUserId:self.userId];
-    
-//    [self.userInfoVC setVCGenerator:^UIViewController *(id params) {
-//        return [UserDetailViewController instanceWithUser:params];
-//    }];
-//    [self addChildViewController:self.userInfoVC];
 }
 
-- (void)addUI {
+- (void)layoutPageSubviews
+{
+    [self.userInfoHelper.infoView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.mas_offset(0);
+        make.top.mas_equalTo(NAVIGATION_BAR_HEIGHT);
+        make.height.mas_equalTo(150);
+    }];
     
-//    CGFloat userInfoViewHeight = [UserInfoViewController viewHeight];
-//    self.userInfoVC.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, userInfoViewHeight);
-//    [self.view addSubview:self.userInfoVC.view];
-    
-    self.blogHelper.tableView.frame = CGRectMake(0, 84, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 84);
-    [self.view addSubview:self.blogHelper.tableView];
+    if (self.isMineVc) return;
+        
+    [self.blogHelper.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.mas_offset(0);
+        make.top.mas_equalTo(self.userInfoHelper.infoView.mas_bottom);
+    }];
 }
 
 - (void)fetchData
 {
-    
-//    [self.userInfoVC fetchData];
-    
+    [self.userInfoHelper fetchUserInfo];
     [self showHUD];
     [self.blogHelper fetchDataWithCompletionHandler:^(NSError *error, id result) {
         [self hideHUD];
@@ -95,10 +98,18 @@
 }
 
 #pragma mark - getters
-- (MVCBlogTableViewMediator *)blogHelper
+- (MVCUserInfoViewHelper *)userInfoHelper
+{
+    if (_userInfoHelper == nil) {
+        _userInfoHelper = [MVCUserInfoViewHelper instanceWithUserId:self.userId];
+    }
+    return _userInfoHelper;
+}
+
+- (MVCBlogTableViewHelper *)blogHelper
 {
     if (_blogHelper == nil) {
-        _blogHelper = [MVCBlogTableViewMediator instanceWithUserId:self.userId];
+        _blogHelper = [MVCBlogTableViewHelper instanceWithUserId:self.userId];
     }
     return _blogHelper;
 }
