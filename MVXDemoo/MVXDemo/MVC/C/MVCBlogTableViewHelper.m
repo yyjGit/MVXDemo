@@ -134,7 +134,7 @@ static NSString *kBlogCellId = @"blogCellId";
     }];
     
     self.tableView.footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        [weakSelf.apiManager loadModeUserBlogsWithUserId:weakSelf.userId completionHandler:^(NSError *error, id result) {
+        [weakSelf.apiManager loadMoreUserBlogsWithUserId:weakSelf.userId completionHandler:^(NSError *error, id result) {
             [weakSelf.tableView.footer endRefreshing];
             
             if (!error) {

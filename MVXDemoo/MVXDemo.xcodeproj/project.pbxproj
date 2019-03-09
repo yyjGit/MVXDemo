@@ -14,6 +14,14 @@
 		D943B44F222FF54B002EC558 /* MVCDraftTableviewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D943B44E222FF54B002EC558 /* MVCDraftTableviewHelper.m */; };
 		D943B452222FFA77002EC558 /* MVCDraftTableviewCellHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D943B451222FFA77002EC558 /* MVCDraftTableviewCellHelper.m */; };
 		D94B06802231146200D70F39 /* MVCUserInfoViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D94B067F2231146200D70F39 /* MVCUserInfoViewHelper.m */; };
+		D955BBF6223389C4002EABA6 /* MVPUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D955BBF5223389C4002EABA6 /* MVPUserViewController.m */; };
+		D955BBF922338A00002EABA6 /* MVPUserInfoViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D955BBF822338A00002EABA6 /* MVPUserInfoViewHelper.m */; };
+		D955BBFC22338A18002EABA6 /* MVPUserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D955BBFB22338A18002EABA6 /* MVPUserInfoView.m */; };
+		D955BBFF22338A52002EABA6 /* MVPUserInfoViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D955BBFE22338A52002EABA6 /* MVPUserInfoViewPresenter.m */; };
+		D955BC022233AB62002EABA6 /* MVPBlogTableViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D955BC012233AB62002EABA6 /* MVPBlogTableViewHelper.m */; };
+		D955BC052233AB97002EABA6 /* MVPBlogTableViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D955BC042233AB97002EABA6 /* MVPBlogTableViewPresenter.m */; };
+		D955BC082233B4BF002EABA6 /* MVPBlogTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D955BC072233B4BF002EABA6 /* MVPBlogTableViewCell.m */; };
+		D955BC0B2233B4D9002EABA6 /* MVPBlogTableViewCellPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D955BC0A2233B4D9002EABA6 /* MVPBlogTableViewCellPresenter.m */; };
 		D9DB5D99222E9BEB00585E11 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DB5D98222E9BEB00585E11 /* AppDelegate.m */; };
 		D9DB5D9C222E9BEB00585E11 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DB5D9B222E9BEB00585E11 /* ViewController.m */; };
 		D9DB5D9F222E9BEB00585E11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9DB5D9D222E9BEB00585E11 /* Main.storyboard */; };
@@ -52,6 +60,22 @@
 		D943B451222FFA77002EC558 /* MVCDraftTableviewCellHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCDraftTableviewCellHelper.m; sourceTree = "<group>"; };
 		D94B067E2231146200D70F39 /* MVCUserInfoViewHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCUserInfoViewHelper.h; sourceTree = "<group>"; };
 		D94B067F2231146200D70F39 /* MVCUserInfoViewHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCUserInfoViewHelper.m; sourceTree = "<group>"; };
+		D955BBF4223389C4002EABA6 /* MVPUserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPUserViewController.h; sourceTree = "<group>"; };
+		D955BBF5223389C4002EABA6 /* MVPUserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPUserViewController.m; sourceTree = "<group>"; };
+		D955BBF722338A00002EABA6 /* MVPUserInfoViewHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPUserInfoViewHelper.h; sourceTree = "<group>"; };
+		D955BBF822338A00002EABA6 /* MVPUserInfoViewHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPUserInfoViewHelper.m; sourceTree = "<group>"; };
+		D955BBFA22338A18002EABA6 /* MVPUserInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPUserInfoView.h; sourceTree = "<group>"; };
+		D955BBFB22338A18002EABA6 /* MVPUserInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPUserInfoView.m; sourceTree = "<group>"; };
+		D955BBFD22338A52002EABA6 /* MVPUserInfoViewPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPUserInfoViewPresenter.h; sourceTree = "<group>"; };
+		D955BBFE22338A52002EABA6 /* MVPUserInfoViewPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPUserInfoViewPresenter.m; sourceTree = "<group>"; };
+		D955BC002233AB62002EABA6 /* MVPBlogTableViewHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPBlogTableViewHelper.h; sourceTree = "<group>"; };
+		D955BC012233AB62002EABA6 /* MVPBlogTableViewHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPBlogTableViewHelper.m; sourceTree = "<group>"; };
+		D955BC032233AB97002EABA6 /* MVPBlogTableViewPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPBlogTableViewPresenter.h; sourceTree = "<group>"; };
+		D955BC042233AB97002EABA6 /* MVPBlogTableViewPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPBlogTableViewPresenter.m; sourceTree = "<group>"; };
+		D955BC062233B4BF002EABA6 /* MVPBlogTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPBlogTableViewCell.h; sourceTree = "<group>"; };
+		D955BC072233B4BF002EABA6 /* MVPBlogTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPBlogTableViewCell.m; sourceTree = "<group>"; };
+		D955BC092233B4D9002EABA6 /* MVPBlogTableViewCellPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPBlogTableViewCellPresenter.h; sourceTree = "<group>"; };
+		D955BC0A2233B4D9002EABA6 /* MVPBlogTableViewCellPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPBlogTableViewCellPresenter.m; sourceTree = "<group>"; };
 		D9DB5D94222E9BEB00585E11 /* MVXDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVXDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9DB5D97222E9BEB00585E11 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D9DB5D98222E9BEB00585E11 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -116,6 +140,68 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D955BBEE22338924002EABA6 /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+				D955BBF222338975002EABA6 /* Scene */,
+				D955BBF022338975002EABA6 /* C */,
+				D955BBF322338976002EABA6 /* V */,
+				D955BBF122338975002EABA6 /* P */,
+			);
+			path = MVP;
+			sourceTree = "<group>";
+		};
+		D955BBEF22338924002EABA6 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		D955BBF022338975002EABA6 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				D955BBF722338A00002EABA6 /* MVPUserInfoViewHelper.h */,
+				D955BBF822338A00002EABA6 /* MVPUserInfoViewHelper.m */,
+				D955BC002233AB62002EABA6 /* MVPBlogTableViewHelper.h */,
+				D955BC012233AB62002EABA6 /* MVPBlogTableViewHelper.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		D955BBF122338975002EABA6 /* P */ = {
+			isa = PBXGroup;
+			children = (
+				D955BBFD22338A52002EABA6 /* MVPUserInfoViewPresenter.h */,
+				D955BBFE22338A52002EABA6 /* MVPUserInfoViewPresenter.m */,
+				D955BC032233AB97002EABA6 /* MVPBlogTableViewPresenter.h */,
+				D955BC042233AB97002EABA6 /* MVPBlogTableViewPresenter.m */,
+				D955BC092233B4D9002EABA6 /* MVPBlogTableViewCellPresenter.h */,
+				D955BC0A2233B4D9002EABA6 /* MVPBlogTableViewCellPresenter.m */,
+			);
+			path = P;
+			sourceTree = "<group>";
+		};
+		D955BBF222338975002EABA6 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				D955BBF4223389C4002EABA6 /* MVPUserViewController.h */,
+				D955BBF5223389C4002EABA6 /* MVPUserViewController.m */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		D955BBF322338976002EABA6 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				D955BBFA22338A18002EABA6 /* MVPUserInfoView.h */,
+				D955BBFB22338A18002EABA6 /* MVPUserInfoView.m */,
+				D955BC062233B4BF002EABA6 /* MVPBlogTableViewCell.h */,
+				D955BC072233B4BF002EABA6 /* MVPBlogTableViewCell.m */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
 		D9DB5D8B222E9BEB00585E11 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +226,8 @@
 				D9DB5DE5222EA8BA00585E11 /* APIManager */,
 				D9DB5DAE222E9CBC00585E11 /* Utils */,
 				D9DB5DAF222E9CBC00585E11 /* MVC */,
+				D955BBEE22338924002EABA6 /* MVP */,
+				D955BBEF22338924002EABA6 /* MVVM */,
 				D943B444222F4546002EC558 /* UserDetailViewController.h */,
 				D943B445222F4546002EC558 /* UserDetailViewController.m */,
 				D943B447222F485A002EC558 /* UserBlogListViewController.h */,
@@ -385,22 +473,30 @@
 				D943B44F222FF54B002EC558 /* MVCDraftTableviewHelper.m in Sources */,
 				D9DB5DE4222EA87D00585E11 /* MVCDraftTableViewCell.m in Sources */,
 				D9DB5D9C222E9BEB00585E11 /* ViewController.m in Sources */,
+				D955BBF922338A00002EABA6 /* MVPUserInfoViewHelper.m in Sources */,
+				D955BBF6223389C4002EABA6 /* MVPUserViewController.m in Sources */,
 				D9DB5DDB222EA64200585E11 /* Draft.m in Sources */,
 				D9DB5DC0222EA13600585E11 /* UIView+Alert.m in Sources */,
 				D9DB5DBF222EA13600585E11 /* UIResponder+Router.m in Sources */,
+				D955BC0B2233B4D9002EABA6 /* MVPBlogTableViewCellPresenter.m in Sources */,
 				D943B44C222F4870002EC558 /* UserDraftListViewController.m in Sources */,
 				D9DB5DE1222EA86700585E11 /* MVCBlogTableViewCell.m in Sources */,
+				D955BBFF22338A52002EABA6 /* MVPUserInfoViewPresenter.m in Sources */,
 				D943B452222FFA77002EC558 /* MVCDraftTableviewCellHelper.m in Sources */,
 				D9DB5DC3222EA13F00585E11 /* UIView+Extension.m in Sources */,
 				D943B446222F4546002EC558 /* UserDetailViewController.m in Sources */,
+				D955BC082233B4BF002EABA6 /* MVPBlogTableViewCell.m in Sources */,
+				D955BC052233AB97002EABA6 /* MVPBlogTableViewPresenter.m in Sources */,
 				D9DB5DA7222E9BEB00585E11 /* main.m in Sources */,
 				D943B449222F485A002EC558 /* UserBlogListViewController.m in Sources */,
 				D9DB5DBE222EA13600585E11 /* UIView+Controller.m in Sources */,
 				D9DB5DD2222EA50600585E11 /* MVCMineViewController.m in Sources */,
 				D9DB5DCF222EA4DB00585E11 /* MVCUserViewController.m in Sources */,
 				D9DB5D99222E9BEB00585E11 /* AppDelegate.m in Sources */,
+				D955BC022233AB62002EABA6 /* MVPBlogTableViewHelper.m in Sources */,
 				D9DB5DDE222EA7BD00585E11 /* UserInfoView.m in Sources */,
 				D94B06802231146200D70F39 /* MVCUserInfoViewHelper.m in Sources */,
+				D955BBFC22338A18002EABA6 /* MVPUserInfoView.m in Sources */,
 				D9DB5DE8222EA8C800585E11 /* UserAPIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

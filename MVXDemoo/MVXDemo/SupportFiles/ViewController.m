@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 #import "MVCUserViewController.h"
+#import "MVPUserViewController.h"
 
 @interface ViewController ()
 
@@ -21,7 +22,6 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -30,6 +30,11 @@
 - (IBAction)MVC:(UIButton *)sender
 {
     [self.navigationController pushViewController:[MVCUserViewController instanceWithUserId:sender.tag] animated:YES];
+}
+
+- (IBAction)MVP:(UIButton *)sender
+{
+    [self.navigationController pushViewController:[MVPUserViewController instanceWithUserId:sender.tag] animated:YES];
 }
 
 @end

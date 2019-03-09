@@ -1,26 +1,25 @@
-
 //
-//  UserInfoView.m
+//  MVPUserInfoView.m
 //  MVXDemo
 //
-//  Created by YangYongJie on 2019/3/5.
+//  Created by YangYongJie on 2019/3/9.
 //  Copyright © 2019年 yyj. All rights reserved.
 //
 
-#import "UserInfoView.h"
+#import "MVPUserInfoView.h"
+#import "User.h"
 
-@interface UserInfoView ()
+@interface MVPUserInfoView ()
 
 @property (nonatomic, strong) UIButton *userIconButton;
 @property (nonatomic, strong) UILabel *usernameLabel;
-@property (nonatomic, copy) void(^userIconClickEventHander)(void);
-
+@property (nonatomic, copy) void(^iconClickEventHandler)(void);
 
 @end
 
-@implementation UserInfoView
+@implementation MVPUserInfoView
 
-#pragma mark - life cycle
+#pragma mark - 初始化方法
 - (instancetype)init
 {
     return [self initWithFrame:CGRectZero];
@@ -29,7 +28,6 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-
         [self addSubview:self.userIconButton];
         [self addSubview:self.usernameLabel];
         [self layoutPageSubviews];
@@ -37,6 +35,21 @@
     return self;
 }
 
+#pragma mark - MVPUserInfoViewPresenterDelegate
+- (void)userInfoViewPresenter:(MVPUserInfoViewPresenter *)presenter didFetchUserInfoWithResult:(id)result error:(NSError *)error
+{
+    if (error) {
+        [self showToastWithText:error.domain];
+    } else {
+        
+        if ([result isKindOfClass:User.class]) {
+            
+            User *u = (User *)result;
+            self.usernameLabel.text = u.name;
+            [self.userIconButton setBackgroundImage:[UIImage imageNamed:u.icon] forState:UIControlStateNormal];
+        }
+    }
+}
 
 #pragma mark - private methods
 - (void)layoutPageSubviews
@@ -54,29 +67,16 @@
     }];
 }
 
+
 #pragma mark - event response
 - (void)userIconButtonAction:(UIButton *)sender
 {
-    if (self.userIconClickEventHander) {
-        self.userIconClickEventHander();
-    }
+    if (self.iconClickEventHandler) {
+        self.iconClickEventHandler();
+    }    
 }
 
 #pragma mark - setters
-- (void)setUserIcon:(NSString *)userIcon
-{
-    [self.userIconButton setImage:[UIImage imageNamed:userIcon] forState:UIControlStateNormal];
-}
-
-- (void)setUsername:(NSString *)username
-{
-    self.usernameLabel.text = username;
-}
-
-- (void)setIconClickEventHandler:(void (^)(void))iconClickEventHandler
-{
-    _userIconClickEventHander = iconClickEventHandler;
-}
 
 #pragma mark - getters
 - (UILabel *)usernameLabel
@@ -94,7 +94,7 @@
 {
     if (_userIconButton == nil) {
         _userIconButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_userIconButton setBackgroundColor:[UIColor redColor]];    
+        [_userIconButton setBackgroundColor:[UIColor redColor]];
         [_userIconButton setFrame:CGRectMake(0, 0, 60, 60)];
         [_userIconButton addTarget:self action:@selector(userIconButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         [_userIconButton yj_setCornerRadius:self.userIconButton.width/2];

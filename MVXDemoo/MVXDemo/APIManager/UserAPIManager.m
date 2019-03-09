@@ -48,7 +48,7 @@
     [self fetchUserBlogsWithUserId:userId page:self.blogPage pageSize:PageSize completionHandler:completionHandler];
 }
 
-- (void)loadModeUserBlogsWithUserId:(NSUInteger)userId completionHandler:(NetworkCompletionHandler)completionHandler {
+- (void)loadMoreUserBlogsWithUserId:(NSUInteger)userId completionHandler:(NetworkCompletionHandler)completionHandler {
     
     self.blogPage += 1;
     [self fetchUserBlogsWithUserId:userId page:self.blogPage pageSize:PageSize completionHandler:completionHandler];
